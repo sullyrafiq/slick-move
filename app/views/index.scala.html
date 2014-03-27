@@ -5,8 +5,8 @@
 <div class="container">
   <!-- Example row of columns -->
   <div class="row">
-	<div>
-		<div id="results" class="list-group">
+	<div id="results" class="col-md-4">
+		<div class="list-group">
 		  <a href="#" class="list-group-item" data-id="1">
 			<img src="@routes.Assets.at("images/MassiveHouse1.jpg")" class="house-thumbnail"/>
 			<h4 class="list-group-item-heading">
@@ -40,7 +40,7 @@
 			<h4 class="list-group-item-heading">
 				<strong>£170,000</strong> Church Lane, Guilden Sutton, Chester
 			</h4>
-			<p class="list-group-item-text">Lorem Ipsum blahdy blah blah</p>
+			<p class="list-group-item-text">Lorem Ipsum blahdy blah blah</p>Lorem Ipsum blahdy blah blah
 		  </a>
 		  <a href="#" class="list-group-item" data-id="6">
 			<img src="@routes.Assets.at("images/Terrace2.jpg")" class="house-thumbnail"/>
@@ -49,7 +49,7 @@
 			</h4>
 			<p class="list-group-item-text">Lorem Ipsum blahdy blah blah</p>
 		  </a>
-		  <a href="#" class="list-group-item"data-id="7">
+		  <a href="#" class="list-group-item" data-id="7">
 			<img src="@routes.Assets.at("images/Apartment1.jpg")" class="house-thumbnail"/>
 			<h4 class="list-group-item-heading">
 				<strong>£275,000</strong> Pulford at Crown Fields, Chester Road, Huntington
@@ -57,7 +57,9 @@
 			<p class="list-group-item-text">Lorem Ipsum blahdy blah blah</p>
 		  </a>
 		</div>
-		<div id="house-details-1" class="panel panel-default" style="display:none;">
+	</div>
+	<div id="main-content" class="col-md-8">
+		<div id="house-details-1" class="panel panel-default">
 		  <div class="panel-body">
 			<img src="@routes.Assets.at("images/MassiveHouse1.jpg")" class="house-thumbnail"/>
 			  <h2>Shannon Close, Saltney</h2>
@@ -113,20 +115,11 @@
 			  <p><a class="btn btn-default back-to-results" href="#" role="button">Back to results</a></p>
 		  </div>
 		</div>
+	</div>
   </div>
-  
   <script type="text/javascript">
-	$(document).ready(function() {
-		$(".list-group-item").click(function() {
-			var itemid = $(this).data("id");
-			$(this).parent().hide();
-			$("#house-details-" + itemid).show();
-		});
-		
-		$(".back-to-results").click(function () {
-			$(this).closest(".panel").hide();
-			$("#results").show();
-		});
+	$("a.list-group-item").click(function() {
+		$("#results").hide("slide", { direction: "left" }, 1000);
 	});
   </script>
 }
