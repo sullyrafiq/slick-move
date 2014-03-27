@@ -1,0 +1,12 @@
+.house-thumbnail {
+	margin-right: 15px;
+	height: 125px;
+	width: 125px;
+	padding-bottom: 15px;
+	float: left;
+}
+
+.list-group-item {
+	padding-bottom: 25px; 
+	min-height: 130px;
+}
