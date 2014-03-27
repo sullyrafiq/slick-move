@@ -10,6 +10,84 @@
 	padding-bottom: 25px; 
 	min-height: 130px;
 }
+
+#bs-example-navbar-collapse-1 , .navbar-header {
+	background-color: #00a1cb;
+}
+
+/********* Login widget CSS **********/
+@font-face {
+    font-family: "ProximaBold";
+    font-style: normal;
+    font-weight: bold;
+    src: url('typefaces/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'), url('typefaces/proximanova-black-webfont.woff') format('woff'), url('typefaces/proximanova-black-webfont.ttf') format('truetype'), url('typefaces/proximanova-black-webfont.svg#ProximaNovaBlack') format('svg');
+}
+
+
+
+.msm-bar {
+	background-color: #562873;
+	color: #FFFFFF;
+	margin: 0 auto;
+	border-top: solid 1px #fff;
+}
+
+.msm-bar .container {
+	height: 130px;
+	background-image: url('/assets/images/msm-logo.png');
+	background-size: 150px auto;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.msm-bar .container div {float: left;}
+
+.signin { background-color: #ffffff; border-radius: 7px; padding: 10px;margin: 20px 0 20px 150px; width:55%;}
+.signin h3 {color: #00aeef; font-size: 18px; margin:0 0 10px 0; }
+.signin h3 strong {font-family: 'ProximaBold'; font-size: 20px;}
+.signin input[type='email'],
+.signin input[type='password'] { background-color: white; border: 2px solid #DEDEDE; -webkit-appearance: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;box-sizing: border-box; padding: 10px 0 10px 10px; width: 40%; border-radius: 5px; }
+
+.signin .btn {
+    text-align: center;
+    font-size: 16px;
+    background-color: #48A415;
+    border-radius: 25px;
+    border: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+	font-family: Arial, sans-serif;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 90px;
+}
+
+.msm-bar .header-text {width:27%; margin: 20px; min-height: 95px; vertical-align: middle;}
+.msm-bar .header-text p {margin: 0; padding:10px 0 0; line-height: normal;font-family: 'ProximaBold'; font-size:22px; text-transform: uppercase;}
+.msm-bar .header-text span.blue-text {color: #00aeef;}
+.msm-bar .header-text span.pink-text {color: #ec008c;}
+
+@media only screen and (max-width: 1040px) {
+	.msm-bar .header-text {width:25%; margin-top: 10px;}
+	.signin h3 {font-size: 14px; }
+	.signin h3 strong {font-size: 14px;}
+	.signin .btn {font-size: 14px;}
+}
+
+@media only screen and (max-width: 480px) {
+	.msm-bar .header-text {display: none;}
+}
+/********* End of Login Widget CSS **********/
+
 div#imageholder{ 
 width: 1024px;
 height: 170px;
@@ -25,13 +103,6 @@ background: #00a1cb;
 position: relative;
 }
 
-div#placeholder {
-width: 100%;
-height: 180px;
-margin-bottom: 0px;
-background: #00a1cb;
-}
-
 
 
 div#component2 {
@@ -40,6 +111,7 @@ height: 120px;
 margin-bottom: 0px;
 background: #00a1cb;
 position: relative;
+}
 
 span.icon-right {
 	top: 50px;

@@ -4,11 +4,11 @@
 
 <div class="container" />
   <!-- Example row of columns -->
-  <div class="row" style="margin-top: 10px;" background: #FFFFFF;>
+  <div class="row" style="margin-top: 10px;" >
 	<div id="results">
-		<div class="list-group">
+		<div id="results-list" class="list-group">
 		  <a href="#" class="list-group-item" data-id="1">
-			<img src="@routes.Assets.at("images/MassiveHouse1.jpg")" class="house-thumbnail"/>
+			<img src="@routes.Assets.at("images/MassiveHouse1.JPG")" class="house-thumbnail"/>
 			<h4 class="list-group-item-heading">
 				<strong>£650,449</strong> Shannon Close, Saltney
 			</h4>
@@ -16,7 +16,7 @@
 			<span class="icon-right glyphicon glyphicon-chevron-right"></span>
 		  </a>
 		  <a href="#" class="list-group-item" data-id="2">
-			<img src="@routes.Assets.at("images/MassiveHouse2.jpg")" class="house-thumbnail"/>
+			<img src="@routes.Assets.at("images/MassiveHouse2.JPG")" class="house-thumbnail"/>
 			<h4 class="list-group-item-heading">
 				<strong>£749,500</strong> Bridgeway, Chester
 			</h4>
@@ -24,7 +24,7 @@
 			<span class="icon-right glyphicon glyphicon-chevron-right"></span>
 		  </a>
 		  <a href="#" class="list-group-item" data-id="3">
-			<img src="@routes.Assets.at("images/MassiveHouse3.jpg")" class="house-thumbnail"/>
+			<img src="@routes.Assets.at("images/MassiveHouse3.JPG")" class="house-thumbnail"/>
 			<h4 class="list-group-item-heading">
 				<strong>£250,000</strong> Withering Lane, Handbridge
 			</h4>
@@ -40,7 +40,7 @@
 			<span class="icon-right glyphicon glyphicon-chevron-right"></span>
 		  </a>
 		  <a href="#" class="list-group-item" data-id="5">
-			<img src="@routes.Assets.at("images/Terrace1.jpg")" class="house-thumbnail"/>
+			<img src="@routes.Assets.at("images/Terrace1.JPG")" class="house-thumbnail"/>
 			<h4 class="list-group-item-heading">
 				<strong>£170,000</strong> Church Lane, Guilden Sutton, Chester
 			</h4>
@@ -48,7 +48,7 @@
 			<span class="icon-right glyphicon glyphicon-chevron-right"></span>
 		  </a>
 		  <a href="#" class="list-group-item" data-id="6">
-			<img src="@routes.Assets.at("images/Terrace2.jpg")" class="house-thumbnail"/>
+			<img src="@routes.Assets.at("images/Terrace2.JPG")" class="house-thumbnail"/>
 			<h4 class="list-group-item-heading">
 				<strong>£175,000</strong> Lime Wood Close, Chester
 			</h4>
@@ -124,6 +124,18 @@
 		</div>
 	</div>
   </div>
+  
+	<script id="house-result" type="text/x-handlebars-template">
+	  <a href="#" class="list-group-item" data-id="1">
+			<img src="@routes.Assets.at("{{imageURL}}")" class="house-thumbnail"/>
+			<h4 class="list-group-item-heading">
+				<strong>£{{price}}</strong> {{address}}
+			</h4>
+			<p class="list-group-item-text">{{description}}</p>
+			<span class="icon-right glyphicon glyphicon-chevron-right"></span>
+		  </a>
+	</script>
+	
     <script type="text/javascript">
 	$(document).ready(function() {
 		$(".list-group-item").click(function() {
