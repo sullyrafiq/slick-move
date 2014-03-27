@@ -9,4 +9,11 @@
 .list-group-item {
 	padding-bottom: 25px; 
 	min-height: 130px;
+	position: relative;
+}
+
+span.icon-right {
+	top: 50px;
+	right: 10px;
+	position: absolute;
 }
