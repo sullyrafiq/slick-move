@@ -11,6 +11,24 @@
 	min-height: 130px;
 }
 
+.clearfix {
+	clear: both;
+}
+
+.house-details-text {
+	float: left;
+}
+
+.house-details-text .price {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.house-details-text div {
+	font-size: 24px;
+}
+
+
 #bs-example-navbar-collapse-1 , .navbar-header {
 	background-color: #00a1cb;
 }
@@ -23,7 +41,7 @@
     src: url('typefaces/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'), url('typefaces/proximanova-black-webfont.woff') format('woff'), url('typefaces/proximanova-black-webfont.ttf') format('truetype'), url('typefaces/proximanova-black-webfont.svg#ProximaNovaBlack') format('svg');
 }
 
-
+.display-none {display: none;}
 
 .msm-bar {
 	background-color: #562873;
@@ -33,7 +51,6 @@
 }
 
 .msm-bar .container {
-	height: 130px;
 	background-image: url('/assets/images/msm-logo.png');
 	background-size: 150px auto;
 	background-repeat: no-repeat;
@@ -41,14 +58,17 @@
 }
 
 .msm-bar .container div {float: left;}
+.msm-bar .container div.button-container {float: none; display: inline-block;}
 
-.signin { background-color: #ffffff; border-radius: 7px; padding: 10px;margin: 20px 0 20px 150px; width:55%;}
-.signin h3 {color: #00aeef; font-size: 18px; margin:0 0 10px 0; }
-.signin h3 strong {font-family: 'ProximaBold'; font-size: 20px;}
+
+.signin, .signedin { background-color: #ffffff; border-radius: 7px; padding: 10px;margin: 20px 0 20px 150px; width:55%;}
+.signin h3, .signedin h3 {color: #00aeef; font-size: 18px; margin:0 0 10px 0; }
+.signin h3 strong, .signedin h3 strong {font-family: 'ProximaBold'; font-size: 20px;}
 .signin input[type='email'],
 .signin input[type='password'] { background-color: white; border: 2px solid #DEDEDE; -webkit-appearance: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;box-sizing: border-box; padding: 10px 0 10px 10px; width: 40%; border-radius: 5px; }
 
-.signin .btn {
+.signin .btn,
+.signedin .btn {
     text-align: center;
     font-size: 16px;
     background-color: #48A415;
@@ -83,9 +103,27 @@
 	.signin .btn {font-size: 14px;}
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 768px) {
 	.msm-bar .header-text {display: none;}
+	.msm-bar .signin { width: 70%;}
 }
+
+@media (max-width: 767px) {
+	.msm-bar .signin .btn {text-align: center; margin: 20px auto 0; }
+}
+
+@media (max-width: 400px) {
+	.msm-bar .container {background:none;}
+	.msm-bar .signin {margin: 20px 2%; width: auto;}
+	.msm-bar .signin input[type='email'],
+	.msm-bar .signin input[type='password'] {width:48%;}
+
+	.msm-bar .signin .button-container {width: 100%;}
+	.msm-bar .signin .btn {text-align: center; margin: 20px auto 0; padding: 20px; width: 50%; }
+	.msm-bar .signin .powered-by {display: block; float: right; margin-top: 10px;}
+}
+
+
 /********* End of Login Widget CSS **********/
 
 div#imageholder{ 
