@@ -43,18 +43,26 @@
 				  
 		<div class="msm-bar">
 			<div class="container">
-				<div class="row">
-					<div class="signin span4">
-						<h3>Sign in with <strong>MoneySuperMarket</strong> account to see your best deals</h3>
-						<input type="email" name="EmailAddress" id="emailAddress" placeholder="Your email" maxlength="50">
-						<input type="password" name="Password" id="password" placeholder="Password" maxlength="20">
-						<input type="submit" value="Sign in" class="btn">
+				<div class="signin">
+					<h3>Sign in with <strong>MoneySuperMarket</strong> account to see your best deals</h3>
+					<input type="email" name="EmailAddress" id="emailAddress" placeholder="Your email" maxlength="50">
+					<input type="password" name="Password" id="password" placeholder="Password" maxlength="20">
+					<div class="button-container">
+						<input type="submit" value="Sign in" id="signin" class="btn">
+						<img class="powered-by display-none" src="/assets/images/powered-by-msm-square.png" alt="powered by msm">
 					</div>
-					<div class="header-text span3">
-						<p>
-							<span class="blue-text">Sign in to see your</span> <span class="pink-text">b£st</span> deals <span class="blue-text">on</span> car insurance &amp; breakdown cover
-						</p>
+				</div>
+				<div class="signedin display-none">
+					<h3>Your signed in with <strong>MoneySuperMarket</strong></h3>
+					<div class="button-container">
+						<input type="submit" value="Sign out" id="signout" class="btn">
+						<img class="powered-by display-none" src="/assets/images/powered-by-msm-square.png" alt="powered by msm">
 					</div>
+				</div>
+				<div class="header-text">
+					<p>
+						<span class="blue-text">Sign in to see your</span> <span class="pink-text">b£st</span> deals <span class="blue-text">on</span> car insurance &amp; breakdown cover
+					</p>
 				</div>
 			</div>
 		</div>
